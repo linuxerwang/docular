@@ -60,8 +60,9 @@ You can also download the deb package in binaries folder.
 
 ## Start docular
 
-When docular is running, it needs certain files which are normally put into folder
-/usr/share/docular. If they are not there, copy them there.
+When docular is running, it needs certain files (webstatic) which are normally put
+into folder /usr/share/docular. If you did not install through the deb package and
+they are not copied, copy them there.
 
 Great, now that you have docular installed, let's start it to serve your documents
 (suppose your documents are put into ~/mydocs):
