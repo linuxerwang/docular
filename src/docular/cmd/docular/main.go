@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"os/user"
 	"path/filepath"
 	"strings"
 
@@ -13,8 +14,8 @@ import (
 
 var (
 	port                = flag.Int("port", 3455, "The http port.")
-	docDir              = flag.String("doc-dir", "", "The doc directory path.")
-	webstatic           = flag.String("webstatic", "/usr/share/docular/webstatic", "The web static directory.")
+	docDir              = flag.String("doc-dir", ".", "The doc directory path.")
+	webstatic           = flag.String("webstatic", "", "The web static directory.")
 	allowExternalAccess = flag.Bool("allow-external", false, "Allow external access")
 
 	allowedHosts                       = []string{"127.0.0.1", "localhost"}
@@ -56,9 +57,13 @@ func checkFlags() {
 		usage()
 	}
 	if *webstatic == "" {
-		fmt.Println("Error: flag webstatic is required.")
-		fmt.Println()
-		usage()
+		current, err := user.Current()
+		if err != nil {
+			fmt.Println("Error: failed to get current user, ", err)
+			os.Exit(2)
+		}
+
+		*webstatic = filepath.Join(current.HomeDir, "docular/webstatic")
 	}
 }
 
