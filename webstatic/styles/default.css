@@ -1,0 +1,259 @@
+@font-face{
+	font-family: Aleo;
+	font-weight: bold;
+	src: url(/_/fonts/Aleo-Bold.otf);
+}
+@font-face{
+	font-family: Aleo;
+	font-weight: normal;
+	src: url(/_/fonts/Aleo-Regular.otf);
+}
+@font-face{
+	font-family: Lato;
+	font-weight: bold;
+	src: url(/_/fonts/Lato-Bold.woff2);
+}
+@font-face{
+	font-family: Lato;
+	font-weight: normal;
+	src: url(/_/fonts/Lato-Regular.woff2);
+}
+
+.docular-pwd {
+	font-weight: bold;
+	padding-bottom: 8px;
+	color: #f04c5c;
+}
+.docular-container {
+	margin-bottom: 10px;
+}
+.docular-entry {
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid #eee;
+	cursor: pointer;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.docular-dir {
+	font-weight: bold;
+	color: #3278A5;
+	margin-right: 15px;
+	min-width: 10em;
+}
+.docular-dir:hover {
+	background-color: rgb(198, 252, 252);
+}
+.docular-file {
+	font-size: 110%;
+	color: #599AFF;
+	margin-right: 15px;
+	min-width: 15em;
+}
+.docular-maff {
+	display: block;
+	font-size: 110%;
+	color: #92094D;
+	margin-right: 15px;
+	min-width: 15em;
+	text-align: left;
+}
+.docular-file:hover {
+	background-color: #BEC9FF;
+}
+.doc-view {
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 16px 16px 64px 16px;
+	word-break: break-word;
+}
+.doc-view img {
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	margin-top: 8px;
+	max-width: 100%;
+	padding: 2px;
+}
+
+.red {
+	color: #f04c5c;
+}
+.blue {
+	color: #419eda;
+}
+.green {
+	color: #6ec654;
+}
+.gray {
+	color: rgba(0, 0, 0, 0.75);
+}
+.black {
+	color: #000;
+}
+.white {
+	color: #fff;
+}
+.orange-dark {
+	color: #f08e4e;
+}
+
+body {
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	background: rgba(0, 0, 0, 0.03);
+	position: relative
+}
+h1 {
+	color: rgba(0, 0, 0, 0.75);
+	font-family: Aleo;
+	font-weight: bolder;
+	text-shadow: 0 1px 0 #fff;
+	text-align: center;
+}
+h2 {
+	border-bottom: 2px solid;
+	color: #419eda;
+	display: inline-block;
+	font-family: Aleo;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+}
+h3 {
+	border-bottom: 1px solid;
+	color: #f04c5c;
+	display: inline-block;
+	font-family: Aleo;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+}
+h4 {
+	border-bottom: 1px solid;
+	display: inline-block;
+	font-family: Aleo;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+	margin: 20px 0 15px 0
+}
+h5 {
+	border-bottom: 1px solid;
+	display: inline-block;
+	font-family: Aleo;
+	font-size: bold;
+	margin-bottom: 2px
+}
+blockquote {
+	border-left: 3px solid lightgray;
+	color: #666;
+	line-height: 1.7em;
+	margin: 5px 40px;
+	padding-left: 8px;
+}
+svg {
+	font-family: Aleo, sans-serif;
+}
+ul,
+ol {
+	padding-left: 25px;
+}
+p,
+li {
+	font-weight: 400;
+	letter-spacing: 0.1px;
+}
+a {
+	color: #419eda;
+}
+a:hover {
+	cursor: pointer;
+}
+p a,
+li a {
+	font-weight: 400;
+}
+b,
+strong {
+	font-weight: 600;
+}
+pre,
+code {
+	background: rgba(0, 0, 0, 0.03);
+	border-radius: 3px;
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.075);
+	color: rgba(0, 0, 0, 0.75);
+	display: inline-block;
+	font-family: monospace;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 0px 4px;
+}
+pre {
+	background: rgba(0, 0, 0, 0.05);
+	border: none;
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.075);
+	padding: 2px 4px;
+}
+pre code {
+	background: none;
+	box-shadow: none;
+	padding: 2px 4px;
+}
+pre,
+code {
+	color: rgba(0, 0, 0, 0.75);
+}
+a {
+	color: #419eda;
+}
+table {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-weight: 400
+}
+table thead th {
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 20px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #666;
+}
+table tbody td {
+	line-height: 18px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 0px;
+	vertical-align: text-top;
+}
+table thead td:first-child,
+table thead th:first-child,
+table tbody td:first-child,
+table tfoot td:first-child {
+	padding-left: 10px;
+}
+table thead td:last-child,
+thead th:last-child,
+table tbody td:last-child,
+table tfoot td:last-child {
+	padding-right: 10px;
+}
+table td.dashed {
+	border-bottom: 1px dashed #ddd;
+}
+table td:first-child.rowspan-padding {
+	padding-left: 0;
+}
+@media print {
+	body {
+		background-color: white;
+		font-size: 13px;
+	}
+}
+
