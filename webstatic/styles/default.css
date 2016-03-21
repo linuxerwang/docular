@@ -106,39 +106,30 @@ body {
 	position: relative
 }
 h1 {
-	color: rgba(0, 0, 0, 0.75);
 	font-family: Aleo;
 	font-weight: bolder;
 	text-shadow: 0 1px 0 #fff;
 	text-align: center;
 }
 h2 {
-	border-bottom: 2px solid;
 	color: #419eda;
-	display: inline-block;
 	font-family: Aleo;
 	font-weight: bold;
 	text-shadow: 0 1px 0 #fff;
 }
 h3 {
-	border-bottom: 1px solid;
 	color: #f04c5c;
-	display: inline-block;
 	font-family: Aleo;
 	font-weight: bold;
 	text-shadow: 0 1px 0 #fff;
 }
 h4 {
-	border-bottom: 1px solid;
-	display: inline-block;
 	font-family: Aleo;
 	font-weight: bold;
 	text-shadow: 0 1px 0 #fff;
 	margin: 20px 0 15px 0
 }
 h5 {
-	border-bottom: 1px solid;
-	display: inline-block;
 	font-family: Aleo;
 	font-size: bold;
 	margin-bottom: 2px
@@ -256,4 +247,5 @@ table td:first-child.rowspan-padding {
 		font-size: 13px;
 	}
 }
+
 
