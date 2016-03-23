@@ -178,6 +178,7 @@ code {
 	font-size: 12px;
 	font-weight: 400;
 	padding: 0px 4px;
+	width: 100%;
 }
 pre {
 	background: rgba(0, 0, 0, 0.05);
