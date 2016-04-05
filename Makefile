@@ -4,6 +4,7 @@ export VERSION := "0.1.0"
 all:
 	@echo "make goget   : Fetch the dependent packages"
 	@echo "make docular : build docular"
+	@echo "make deb     : build deb package"
 
 goget:
 	go get github.com/microcosm-cc/bluemonday

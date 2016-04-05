@@ -184,7 +184,7 @@ pre {
 	background: rgba(0, 0, 0, 0.05);
 	border: none;
 	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.075);
-	padding: 2px 4px;
+	padding: 15px;
 }
 pre code {
 	background: none;
