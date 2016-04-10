@@ -190,10 +190,7 @@ pre code {
 	background: none;
 	box-shadow: none;
 	padding: 2px 4px;
-}
-pre,
-code {
-	color: rgba(0, 0, 0, 0.75);
+	overflow: auto;
 }
 a {
 	color: #419eda;
