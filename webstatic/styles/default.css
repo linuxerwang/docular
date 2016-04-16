@@ -196,10 +196,10 @@ a {
 	color: #419eda;
 }
 table {
-	width: 100%;
+	border-spacing: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	font-weight: 400
+	font-weight: 400;
 }
 table thead th {
 	text-transform: uppercase;
@@ -239,11 +239,12 @@ table td.dashed {
 table td:first-child.rowspan-padding {
 	padding-left: 0;
 }
+hr {
+	margin: 25px 20px;
+}
 @media print {
 	body {
 		background-color: white;
 		font-size: 13px;
 	}
 }
-
-

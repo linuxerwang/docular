@@ -8,7 +8,31 @@ import (
 	"path/filepath"
 
 	"github.com/microcosm-cc/bluemonday"
-	"github.com/shurcooL/github_flavored_markdown"
+	"github.com/russross/blackfriday"
+)
+
+const (
+  renderHtmlFlags = 0 |
+		blackfriday.HTML_USE_XHTML |
+		blackfriday.HTML_USE_SMARTYPANTS |
+		blackfriday.HTML_SMARTYPANTS_FRACTIONS |
+		blackfriday.HTML_SMARTYPANTS_DASHES |
+		blackfriday.HTML_SMARTYPANTS_LATEX_DASHES |
+		blackfriday.HTML_TOC
+
+	renderExtensions = 0 |
+		blackfriday.EXTENSION_AUTO_HEADER_IDS |
+		blackfriday.EXTENSION_AUTOLINK |
+		blackfriday.EXTENSION_BACKSLASH_LINE_BREAK |
+		blackfriday.EXTENSION_DEFINITION_LISTS |
+		blackfriday.EXTENSION_FENCED_CODE |
+		blackfriday.EXTENSION_FOOTNOTES |
+		blackfriday.EXTENSION_HEADER_IDS |
+		blackfriday.EXTENSION_NO_INTRA_EMPHASIS |
+		blackfriday.EXTENSION_SPACE_HEADERS |
+		blackfriday.EXTENSION_STRIKETHROUGH |
+		blackfriday.EXTENSION_TABLES |
+		blackfriday.EXTENSION_TITLEBLOCK
 )
 
 func (wh *wrapperHandler) serveMarkDown(w http.ResponseWriter, r *http.Request, path string) {
@@ -29,7 +53,7 @@ func (wh *wrapperHandler) serveMarkDown(w http.ResponseWriter, r *http.Request, 
 	w.WriteHeader(http.StatusOK)
 
 	// Convert to HTML
-	unsafe := github_flavored_markdown.Markdown(b)
+	unsafe := renderMarkdown(b)
 	html := bluemonday.UGCPolicy().SanitizeBytes(unsafe)
 
 	printPageHeader(w)
@@ -41,7 +65,13 @@ func (wh *wrapperHandler) serveMarkDown(w http.ResponseWriter, r *http.Request, 
 	}
 
 	printPageFooter(w)
+}
 
+func renderMarkdown(input []byte) []byte {
+  // set up the HTML renderer
+	renderer := blackfriday.HtmlRenderer(renderHtmlFlags, "", "")
+	return blackfriday.MarkdownOptions(input, renderer, blackfriday.Options{
+		Extensions: renderExtensions})
 }
 
 func printPageHeader(w http.ResponseWriter) {
